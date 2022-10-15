@@ -5,11 +5,11 @@ import { isDark } from '~/composables'
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: '隔离食用手册',
+  title: '拯救不会做菜',
   meta: [
     {
       name: 'description',
-      content: '好的，今天我们来做菜！',
+      content: '来吧,今天我们来做菜！',
     },
     {
       name: 'theme-color',

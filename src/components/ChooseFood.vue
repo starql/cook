@@ -69,7 +69,15 @@ const randomRecipe = ref<RecipeItem>(generateRandomRecipe())
       </span>
     </button>
   </Transition>
+  <hr m="y-2">
 
+  <div class="inline-flex justify-center items-center">
+    <span text="xl" font="bold" p="1">今天吃什么？随机挑战!</span>
+    <div class="transition" hover="text-blue-500" inline-block cursor-pointer i-ri-refresh-line @click="randomRecipe = generateRandomRecipe()" />
+  </div>
+  <p m="t-2">
+    <DishTag :dish="randomRecipe" />
+  </p>
   <h2 m="t-4" text="xl" font="bold" p="1">
     🥘 先选一下食材
   </h2>
@@ -184,15 +192,6 @@ const randomRecipe = ref<RecipeItem>(generateRandomRecipe())
           </span>
         </div>
       </Transition>
-
-      <hr m="y-2">
-
-      <div class="inline-flex justify-center items-center">
-        今天吃什么？<div class="transition" hover="text-blue-500" inline-block cursor-pointer i-ri-refresh-line @click="randomRecipe = generateRandomRecipe()" />
-      </div>
-      <p m="t-2">
-        <DishTag :dish="randomRecipe" />
-      </p>
     </div>
   </div>
 </template>
